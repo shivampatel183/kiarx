@@ -10,12 +10,11 @@ import {
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule], // Import necessary modules here
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-  // Use 'inject' for cleaner dependency injection
   private fb = inject(FormBuilder);
 
   loginForm: FormGroup = this.fb.group({
@@ -36,7 +35,6 @@ export class LoginComponent {
       return;
     }
 
-    // Simulate API call since no backend is connected yet
     console.log('Form Submitted Successfully', this.loginForm.value);
     alert('Login Successful!');
   }
